@@ -65,34 +65,4 @@ python cheque_digit_adversarial.py
 
 ---
 
-## Expected Output Reference
 
-### Part A — Baseline Model under Attack
-
-| Epsilon ($\varepsilon$) | FGSM Accuracy | PGD Accuracy |
-| :---: | :---: | :---: |
-| 0.00 | 98.7 % | 98.7 % |
-| 0.05 | 95.5 % | 94.9 % |
-| 0.10 | 86.7 % | 80.0 % |
-| 0.20 | 38.1 % | 5.0 % |
-| 0.30 | 3.7 % | 0.0 % |
-
-- **Attack success rate ($\varepsilon = 0.20$):** FGSM ~61.9 %, PGD ~95.0 %
-- **Generated Plot:** `clean_vs_adversarial.png`
-
-### Part B — Adversarial Training (Defence)
-
-| Model | Clean Accuracy | FGSM (0.20) | PGD (0.20) |
-| :--- | :---: | :---: | :---: |
-| Baseline | 98.7 % | 38.1 % | 5.0 % |
-| Adversarially Trained | 99.1 % | 92.1 % | 73.1 % |
-
-- **Clean accuracy change:** +0.4 %
-- **FGSM robustness gain:** +54.0 % | **PGD robustness gain:** +68.1 %
-- **Generated Plot:** `accuracy_vs_epsilon.png`
-
----
-
-## Submission Report
-
-The complete practical submission report — including **Aim, Algorithm, Program, Expected/Observed Output, Answers to Technical Questions (Q1–Q4), and Conclusion** — is included in [RSA_Practical_Report_23CS039_SetA.pdf](RSA_Practical_Report_23CS039_SetA.pdf).
